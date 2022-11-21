@@ -1,32 +1,39 @@
 import React from 'react';
 import '../styles/Navbar.css';
-import { Link, useMatch, useResolvedPath } from 'react-router-dom';
-// import AboutMe from './AboutMe';
-// import Project from './Project';
-// import Resume from './Resume';
-// import ContactMe from './ContactMe';
+import { Link, useMatch, useResolvedPath, useLocation } from 'react-router-dom';
+
+// function highlightMe(x) {
+//     x.style.color = "yellow";
+//   }
+  
+//   function normalTab(x) {
+//     x.style.color = "white";
+//   }
 
 function Navbar() {
+const {pathname} = useLocation();
+
+
+
   return ( 
-    <nav className="nav navbar navbar-expand-lg navbar-dark bg-dark position-absolute top-0 end-0">
+    <nav className="nav navbar navbar-expand-lg navbar-dark bg-dark justify-content-end">
         <ul className="navbar-nav">
-            <Link to="/aboutMe" className="nav-link nav-item active">About Me</Link>
-            <CustomLink to="/projects" className="nav-link nav-item active">Projects</CustomLink>
-            <CustomLink to="/resume" className="nav-link nav-item active">Resumé</CustomLink>
-            <CustomLink to="/contactMe" className="nav-link nav-item active">Contact Me</CustomLink>
+            <NavLink to="/aboutMe" className={pathname === '/aboutMe' ? 'activeBtn nav-link nav-item' : 'nav-link nav-item'} >About Me</NavLink>
+            <NavLink to="/projects" className={pathname === '/projects' ? 'activeBtn nav-link nav-item' : 'nav-link nav-item'} >Projects</NavLink>
+            <NavLink to="/resume" className={pathname === '/resume' ? 'activeBtn nav-link nav-item' : 'nav-link nav-item'}>Resumé</NavLink>
+            <NavLink to="/contactMe" className={pathname === '/contactMe' ? 'activeBtn nav-link nav-item' : 'nav-link nav-item'}>Contact Me</NavLink>
         </ul>
     </nav>
-       
   );
 }
 
-function CustomLink({ to, children, ...props}) {
+function NavLink({ to, children, ...props}) {
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({path: resolvedPath.pathname, end: true})
 
     return(
         <li className={isActive === to ? "active" : ""}>
-            <Link to={to} {...props}>
+            <Link to={to} {...props} >
                 {children}
             </Link>
         </li>

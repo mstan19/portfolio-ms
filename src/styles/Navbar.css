@@ -1,11 +1,3 @@
-/* .navbar {
-    display: flex; 
-    justify-content: space-between;
-    color: white,
+.activeBtn {
+background-color:goldenrod
 }
-
-.navbar li{
-    display: flex; 
-    justify-content: space-between;
-    color: white,
-} */
