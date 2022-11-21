@@ -10,18 +10,10 @@ function Navbar() {
   return ( 
     <nav className="nav navbar navbar-expand-lg navbar-dark bg-dark position-absolute top-0 end-0">
         <ul className="navbar-nav">
-            <li className="nav-item active">
-                <Link to="/aboutMe" className="nav-link">About Me</Link>
-            </li>
-            <li className="nav-item active">
-                <CustomLink to="/projects" className="nav-link">Projects</CustomLink>
-            </li>
-            <li className="nav-item active">
-                <CustomLink to="/resume" className="nav-link">Resumé</CustomLink>
-            </li>
-            <li className="nav-item active">
-                <CustomLink to="/contactMe" className="nav-link">Contact Me</CustomLink>
-            </li>
+            <Link to="/aboutMe" className="nav-link nav-item active">About Me</Link>
+            <CustomLink to="/projects" className="nav-link nav-item active">Projects</CustomLink>
+            <CustomLink to="/resume" className="nav-link nav-item active">Resumé</CustomLink>
+            <CustomLink to="/contactMe" className="nav-link nav-item active">Contact Me</CustomLink>
         </ul>
     </nav>
        
@@ -38,7 +30,6 @@ function CustomLink({ to, children, ...props}) {
                 {children}
             </Link>
         </li>
-
     )
 }
 
