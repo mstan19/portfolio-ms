@@ -1,17 +1,17 @@
 import React from "react";
-import ProjectCard from './ProjectCard';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
 import projectOnePic from '../assets/project1pic.png';
 import projectTwoPic from '../assets/project2pic.png';
 import projectThreePic from '../assets/comingsoon.jpg';
-
-
-// import profilePic from '../assets/profilePic.JPG';
+import '../styles/Project.css';
 
 const projects = [
   {
       title: '1',
       description:
-          'x',
+          'xasdadasdasdasdadadads',
       image: projectOnePic,
       technologies: [
           'x',
@@ -22,7 +22,7 @@ const projects = [
   {
       title: '2',
       description:
-        'y',
+        'yxasdadasdasdasdadadads',
       image: projectTwoPic,
       technologies: [
         'y',
@@ -33,7 +33,7 @@ const projects = [
 {
   title: '3',
   description:
-    'y',
+    'yxdasdadasdasdasdadadads',
   image: projectThreePic,
   technologies: [
     'y',
@@ -43,18 +43,35 @@ const projects = [
 }
 ]
 
-export default function Project() {
-  let allProjects = [];
-  for (var i = 0; i < projects.length; i++) {
-    allProjects.push( <ProjectCard key={projects[i].title} image={projects[i].image} name={projects[i].title} description={projects[i].description} technologies={projects[i].technologies} deployedLink={projects[i].deployedLink} />);
-  }
-  return (
-    <div>
-      <div className="project-header card">
-        <h2>Projects</h2>
-      </div>
+function Project() {
   
-      {allProjects}
-    </div>
-  );
+  return (
+    <Row lg={1}>
+      <h2 style={{ textAlign: 'center' }}> Projects</h2>
+        <Col className="cards d-flex" >
+          {projects.map(project =>{
+            const {title, image, description, technologies, deployedLink} = project;
+            return(
+              <Card className="container" style={{ width: '25rem', padding: '0px' }} key={title}>
+                <Card.Img
+                  variant="top"
+                  className="card-img"
+                  src={image}
+                  alt="Mock up"
+                />
+                <Card.Body className="card-body"   >
+                  <Card.Title className="card-title fs-3 fw-bold">Title: {title}</Card.Title>
+                    <Card.Text className="card-text" id="description">Description: {description}</Card.Text>
+                    <Card.Text className="card-text" id="technologies">Technologies Used: {technologies}</Card.Text>
+                    <Card.Text className="card-text" id="deployedLink">Deployed Link: {deployedLink}</Card.Text>
+
+                </Card.Body>
+              </Card>
+                );
+              })}
+        </Col>
+    </Row>
+  )
 }
+
+export default Project;
