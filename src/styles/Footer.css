@@ -1,4 +1,8 @@
 .icons {
-   color: black
-    
+   color: white;
+   background-color: rgb(50, 50, 50);
+   border-radius: 50%;
+   max-width: 25px;   
+   max-height: 25px;   
 }
+

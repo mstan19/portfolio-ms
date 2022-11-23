@@ -1,3 +1,25 @@
 .activeBtn {
-background-color:goldenrod
+background-color: rgba(218, 165, 32, 0.109);
+opacity: 1 !important;
+}
+
+
+.nav-icons {
+    padding-top: 8px;
+    font-size: 20px;
+}
+
+.nav-text {
+    font-size:  22px;
+    margin: 0px;
+    padding: 0px;
+color: white;
+}
+
+.nav-link-btn {
+    opacity:0.5;
+}
+
+#nav-highlight {
+color: rgb(248, 187, 33);
 }

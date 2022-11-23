@@ -103,7 +103,7 @@ function Resume() {
         </Col>
     </Row>
 
-    <Row md={1}>
+    <Row lg={1}>
         <Col className="cards d-flex " >
           {backendIcons.map(skill =>{
             const {title, icon} = skill;

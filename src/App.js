@@ -10,18 +10,24 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return ( 
-  <div>
-    <Header />
-    <Navbar />
-    <div className='container'>
-      <Routes>
-        <Route path="/aboutMe" element={<AboutMe />}></Route>
-        <Route path="/projects" element={<Project />}></Route>
-        <Route path="/resume" element={<Resume />}></Route>
-        <Route path="/contactMe" element={<ContactMe />}></Route>
-      </Routes>
+  <div className='row h-100'>
+    <div className='col-2 d-flex flex-column' style={{backgroundColor: 'rgb(20,20,20)'}}>
+      <Header />
+  
+<hr></hr>
+      <Navbar />
+      <Footer />
+      
     </div>
-    <Footer />
+
+    <div className='col-10'style={{marginTop: '25px'}}>
+        <Routes>
+          <Route path="/aboutMe" element={<AboutMe />}></Route>
+          <Route path="/projects" element={<Project />}></Route>
+          <Route path="/resume" element={<Resume />}></Route>
+          <Route path="/contactMe" element={<ContactMe />}></Route>
+        </Routes>
+      </div>
   </div>
   );
 }
