@@ -20,6 +20,11 @@
     font-size: large;
 }
 
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
 #description, #technologies {
     margin-bottom: 5px;
 }
