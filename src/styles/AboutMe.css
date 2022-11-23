@@ -1,4 +1,28 @@
 .profile-pic {
-    height: 200px;
-    width: 200px; 
+    height: 400px;
+    width: 400px; 
+    margin-top: 50px;
+}
+
+#about-me-title {
+    color: rgb(207, 207, 203);
+    margin-top: 30px;
+}
+
+#about-me-text {
+    color: rgb(207, 207, 203);
+    font-size: 18px;
+    margin-top: 100px;
+}
+
+#title-line {
+    height: 0px;
+    border: none;
+    border-top: 2px solid goldenrod;
+    width:50%;
+    margin:0 auto;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    
+
 }

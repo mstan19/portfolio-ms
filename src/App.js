@@ -20,7 +20,7 @@ function App() {
       
     </div>
 
-    <div className='col-10'style={{marginTop: '25px'}}>
+    <div className='col-10'style={{ backgroundColor: 'rgb(44, 44, 44)'}}>
         <Routes>
           <Route path="/aboutMe" element={<AboutMe />}></Route>
           <Route path="/projects" element={<Project />}></Route>
