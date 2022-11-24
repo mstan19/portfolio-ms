@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { validateEmail } from '../utils/helper.js';
+import '../styles/ContactMe.css';
 
 function ContactMe() {
     const [email, setEmail] = useState('');
@@ -44,31 +45,31 @@ function ContactMe() {
       setEmail('');
       setMessage('');
     };
-
+    
   return (
     <div className="contactMe text-center">
       <div className="contactMe-header">
-        <h2>Contact Me</h2>
+        <h1 id='contact-me-title'>Contact Me</h1>
       </div>
-      
+      <hr id='title-line'></hr>
       <Form>
       <Form.Group className="mb-3" >
-            <Form.Label>Name</Form.Label>
-            <Form.Control value={name} name="name" onChange={handleChange} type="text" placeholder="Full Name" /> 
+            <Form.Label className='contact-me-text'>Name</Form.Label>
+            <Form.Control id='form-name' value={name} name="name" onChange={handleChange} type="text" placeholder="Enter your full name" /> 
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control value={email} name="email" onChange={handleChange} type="email" placeholder="Enter E-mail" />
+            <Form.Label className='contact-me-text'>Email address</Form.Label>
+            <Form.Control id='form-email' value={email} name="email" onChange={handleChange} type="email" placeholder="Enter E-mail" />
             
         </Form.Group>
 
         <Form.Group className="mb-3" >
-            <Form.Label>Message</Form.Label>
-            <Form.Control value={message}type="text" onChange={handleChange} placeholder="Message" />
+            <Form.Label className='contact-me-text'>Message</Form.Label>
+            <Form.Control id='form-message' className='text-start' value={message}type="text" onChange={handleChange}  />
         </Form.Group>
        
-        <Button variant="dark"  onClick={handleFormSubmit} type="submit">
+        <Button variant="light"  onClick={handleFormSubmit} type="submit">
             Submit
         </Button>
 

@@ -28,3 +28,19 @@ a:link {
 #description, #technologies {
     margin-bottom: 5px;
 }
+
+#title-line {
+    height: 0px;
+    border: none;
+    border-top: 2px solid goldenrod;
+    width:50%;
+    margin:0 auto;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+
+#project-title {
+    text-align: center;
+    color: rgb(207, 207, 203);
+    margin-top: 30px;
+}

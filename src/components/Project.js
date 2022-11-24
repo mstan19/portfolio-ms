@@ -46,8 +46,9 @@ const projects = [
 function Project() {
   
   return (
-    <Row lg={1}>
-      <h2 style={{ textAlign: 'center' }}> Projects</h2>
+    <Row >
+      <h1 id="project-title"> Projects</h1>
+      <hr id='title-line'></hr>
         <Col className="cards d-flex" >
           {projects.map(project =>{
             const {title, image, github, description, technologies, deployedLink} = project;

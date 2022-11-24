@@ -1,0 +1,29 @@
+#title-line {
+    height: 0px;
+    border: none;
+    border-top: 2px solid goldenrod;
+    width:50%;
+    margin:0 auto;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+
+#contact-me-title {
+    color: rgb(207, 207, 203);
+    margin-top: 30px;
+}
+
+.contact-me-text {
+    color: rgb(207, 207, 203);
+
+}
+
+#form-email, #form-name, #form-message {
+    width: 60%;
+    margin:0 auto;
+} 
+
+#form-message {
+    height: 200px;
+    text-align: top;
+}
