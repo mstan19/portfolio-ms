@@ -1,4 +1,27 @@
  #downloadIcon {
-    height: 40px;
-    color: black
+    height: 30px;
+    color: black;
+    
+    border-left: 5px solid rgb(180, 136, 27);
  }
+
+ .resume-icon {
+   
+   background-color:  rgb(248, 187, 33);
+   opacity: .35
+ }
+
+ #title-line {
+   height: 0px;
+   border: none;
+   border-top: 2px solid goldenrod;
+   width:50%;
+   margin:0 auto;
+   margin-bottom: 100px;
+   margin-top: 30px;
+}
+
+#resume-title {
+   color: rgb(207, 207, 203);
+   margin-top: 30px;
+}

@@ -83,10 +83,12 @@ function Resume() {
   return (
     <div className="resume text-center">
       <div className="resume-header">
-        <h2>Resumé</h2>
+        <h1 id='resume-title'>Resumé</h1>
       </div>
-      <a href = {pdf} download="myFile" target = "_blank" rel="noreferrer"><FontAwesomeIcon icon={faDownload} className='icon px-3' id='downloadIcon'/>Download My Resumé</a>
-
+      <hr id='title-line'></hr>
+      <div className="resume-icon">
+        <a href = {pdf} download="myFile" target = "_blank" rel="noreferrer"><FontAwesomeIcon icon={faDownload} className='icon px-3' id='downloadIcon'/>Download My Resumé</a>
+      </div>
       <Row lg={1}>
         <Col className="cards d-flex " >
           {frontendIcons.map(skill =>{

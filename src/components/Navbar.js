@@ -6,12 +6,10 @@ import { Link, useLocation } from 'react-router-dom';
 
 
 function Navbar() {
-
-
   return ( 
     <nav className="nav">
         <ul className="navbar-nav container-fluid ">
-            <NavLink to="/aboutMe" className='nav-link nav-item ' > 
+            <NavLink to="/" className='nav-link nav-item ' > 
                 <FontAwesomeIcon icon={faHouse} className='nav-icons col-3' />
                 <div className='nav-text col-8 '>About Me</div>
             </NavLink>

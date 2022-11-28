@@ -22,12 +22,12 @@ function App() {
 
     <div className='col-10'style={{ backgroundColor: 'rgb(44, 44, 44)'}}>
         <Routes>
-          <Route path="/aboutMe" element={<AboutMe />}></Route>
+          <Route path="/" element={<AboutMe />}></Route>
           <Route path="/projects" element={<Project />}></Route>
           <Route path="/resume" element={<Resume />}></Route>
           <Route path="/contactMe" element={<ContactMe />}></Route>
         </Routes>
-      </div>
+    </div>
   </div>
   );
 }
