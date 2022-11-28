@@ -9,76 +9,77 @@ import { faHtml5, faCss3Alt, faJs, faReact, faBootstrap, faNodeJs } from '@forta
 
 import '../styles/Resume.css';
 
-const frontendIcons = [
-  {
-    title: 'HTML',
-    icon: faHtml5,
+// const frontendIcons = [
+//   {
+//     title: 'HTML',
+//     icon: faHtml5,
         
-  },
-  {
-    title: 'CSS',
-    icon: faCss3Alt,
+//   },
+//   {
+//     title: 'CSS',
+//     icon: faCss3Alt,
       
-  },
-  {
-    title: 'JavaScript',
-    icon: faJs,
+//   },
+//   {
+//     title: 'JavaScript',
+//     icon: faJs,
       
-  },
-  {
-    title: 'React',
-    icon: faReact,
+//   },
+//   {
+//     title: 'React',
+//     icon: faReact,
       
-  },
-  {
-    title: 'Bootstrap',
-    icon: faBootstrap,
+//   },
+//   {
+//     title: 'Bootstrap',
+//     icon: faBootstrap,
       
-  },
-]
+//   },
+// ]
 
-const backendIcons = [
-  {
-    title: 'APIs',
-    icon: faHtml5,
+// const backendIcons = [
+//   {
+//     title: 'APIs',
+//     icon: faHtml5,
         
-  },
-  {
-    title: 'Node',
-    icon: faNodeJs,
+//   },
+//   {
+//     title: 'Node',
+//     icon: faNodeJs,
       
-  },
-  {
-    title: 'Express',
-    icon: faJs,
+//   },
+//   {
+//     title: 'Express',
+//     icon: faJs,
       
-  },
-  {
-    title: 'MySQL',
-    icon: faReact,
+//   },
+//   {
+//     title: 'MySQL',
+//     icon: faReact,
       
-  },
-  {
-    title: 'Sequelize',
-    icon: faBootstrap,
+//   },
+//   {
+//     title: 'Sequelize',
+//     icon: faBootstrap,
       
-  },
-  {
-    title: 'MongoDB',
-    icon: faJs,
+//   },
+//   {
+//     title: 'MongoDB',
+//     icon: faJs,
       
-  },
-  {
-    title: 'Monogoose',
-    icon: faReact,
+//   },
+//   {
+//     title: 'Monogoose',
+//     icon: faReact,
       
-  },
-  {
-    title: 'GraphQL',
-    icon: faBootstrap,
+//   },
+//   {
+//     title: 'GraphQL',
+//     icon: faBootstrap,
       
-  },
-]
+//   },
+// ]
+                      
 function Resume() {
   return (
     <div className="resume text-center">
@@ -89,37 +90,27 @@ function Resume() {
       <div className="resume-icon">
         <a href = {pdf} download="myFile" target = "_blank" rel="noreferrer"><FontAwesomeIcon icon={faDownload} className='icon px-3' id='downloadIcon'/>Download My Resumé</a>
       </div>
-      <Row lg={1}>
-        <Col className="cards d-flex " >
-          {frontendIcons.map(skill =>{
-            const {title, icon} = skill;
-            return(
-              <Card className="container " style={{ width: '5rem' }} key={title}>
-                <Card.Body className="card-body d-flex justify-content-center"   >
-                <FontAwesomeIcon icon={icon} className='icons fa-3x'/> 
-                  <Card.Title className="card-icon-name fs-3 fw-bold"> {title}</Card.Title>
-                </Card.Body>
-              </Card>
-                );
-              })}
-        </Col>
-    </Row>
-
-    <Row lg={1}>
-        <Col className="cards d-flex " >
-          {backendIcons.map(skill =>{
-            const {title, icon} = skill;
-            return(
-              <Card className="container " style={{ width: '5rem' }} key={title}>
-                <Card.Body className="card-body d-flex justify-content-center"   >
-                <FontAwesomeIcon icon={icon} className='icons fa-3x'/> 
-                  <Card.Title className="card-icon-name fs-3 fw-bold"> {title}</Card.Title>
-                </Card.Body>
-              </Card>
-                );
-              })}
-        </Col>
-    </Row>
+      <div class="resume-list">
+        <h3>Front-end Proficiencies</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>Responsive Design</li>
+            <li>React</li>
+            <li>Bootstrap</li>
+          </ul>
+        <h3>Back-end Proficiencies</h3>
+        <ul>
+            <li>APIs</li>
+            <li>Node</li>
+            <li>Express</li>
+            <li>MySQL, Sequelize</li>
+            <li>MongoDB, Mongoose</li>
+            <li>REST</li>
+            <li>GraphQL</li>
+          </ul>
+      </div>
     </div>
   );
 }

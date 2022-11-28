@@ -25,3 +25,12 @@
    color: rgb(207, 207, 203);
    margin-top: 30px;
 }
+
+.resume-list {
+   color: white;
+   text-align: left;
+}
+
+.resume-list li {
+   color: white;
+}
