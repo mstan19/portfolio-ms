@@ -2,7 +2,7 @@ import React from "react";
 import Card from 'react-bootstrap/Card';
 import projectOnePic from '../assets/project1pic.png';
 import projectTwoPic from '../assets/project2pic.png';
-import projectThreePic from '../assets/comingsoon.jpg';
+import projectThreePic from '../assets/project3pic.png';
 import socialNetworkPic from '../assets/socialnetworkmockuppic.png';
 import teamGeneratorPic from '../assets/team-profile-mockup.png';
 import textEditorPic from '../assets/indexeddb.png';
@@ -33,7 +33,7 @@ const projects = [
     github: 'https://github.com/Yuyitax/TurnipFest',
 },
 {
-  title: 'Coming Soon',
+  title: 'ReduMade',
   image: projectThreePic,
   technologies: [
     'MERN stack',
