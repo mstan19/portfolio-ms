@@ -33,7 +33,7 @@ const projects = [
     github: 'https://github.com/Yuyitax/TurnipFest',
 },
 {
-  title: 'ReduMade',
+  title: 'ResuMade',
   image: projectThreePic,
   technologies: [
     'MERN stack',
